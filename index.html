@@ -9,10 +9,34 @@
 </head>
 <body>
     <header>
+        <h1>Gestión de reservas</h1>
     </header>
     <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#reservas">Reservas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
     <main>
+        <section>
+            <h2>Nueva Reserva</h2>
+            <form id="formulario-reserva">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+                <label for="numero-personas">Número de Personas:</label>
+                <input type="number" id="numero-personas" required>
+                <button type="submit">Agregar Reserva</button>
+            </form>
+        </section>
+        <section>
+            <h2>Lista de Reservas</h2>
+            <div id="lista-reservas"></div>
+        </section>
     </main>
     <footer>
     </footer>

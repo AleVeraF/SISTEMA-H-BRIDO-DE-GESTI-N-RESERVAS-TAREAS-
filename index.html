@@ -13,12 +13,16 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#reservas">Reservas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#home" onclick="mostrarSeccion('home')">Inicio</a></li>
+            <li><a href="#nueva-reserva" onclick="mostrarSeccion('nueva-reserva')">Nueva Reserva</a></li>
+            <li><a href="#lista-reservas" onclick="mostrarSeccion('lista-reservas')">Lista de Reservas</a></li>
         </ul>
     </nav>
     <main>
+        <section id="home">
+            <h2>Inicio</h2>
+            <p>Bienvenido a la página de inicio.</p>
+        </section>
         <section>
             <h2>Nueva Reserva</h2>
             <form id="formulario-reserva">
@@ -33,9 +37,9 @@
                 <button type="submit">Agregar Reserva</button>
             </form>
         </section>
-        <section>
+        <section id="lista-reservas" style="display: none;">
             <h2>Lista de Reservas</h2>
-            <div id="lista-reservas"></div>
+            <div id="lista-reservas-contenido"></div>
         </section>
     </main>
     <footer>

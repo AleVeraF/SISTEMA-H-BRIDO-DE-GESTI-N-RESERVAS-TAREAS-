@@ -38,6 +38,7 @@ header {
     width: 100%;
     padding: 1rem;
     color: rgb(8, 8, 8);
+    gap: 3rem;
 }
 
 header, li {

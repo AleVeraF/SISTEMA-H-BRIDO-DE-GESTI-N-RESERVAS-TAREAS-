@@ -5,8 +5,9 @@ function manejarFormulario(event) {
     const nombre = document.getElementById('nombre').value; 
     const fecha = document.getElementById('fecha').value;
     const hora = document.getElementById('hora').value;
+    const numeroPersonas = document.getElementById('numero-personas').value;
 
-    if (!nombre || !fecha || !hora) {
+    if (!nombre || !fecha || !hora || !numeroPersonas) {
         alert('Por favor, completa todos los campos.');
         return;
     }
@@ -16,6 +17,7 @@ function manejarFormulario(event) {
         nombre,
         fecha,
         hora,
+        numeroPersonas,
     };
 
     const reservas = JSON.parse(localStorage.getItem('reservas')) || [];

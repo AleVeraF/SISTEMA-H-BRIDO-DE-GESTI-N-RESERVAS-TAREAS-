@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Proyecto</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Gestión de reservas</h1>
+      <h1>Gestión de reservas</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="#home" onclick="mostrarSeccion('home')">Inicio</a></li>
-            <li><a href="#nueva-reserva" onclick="mostrarSeccion('nueva-reserva')">Nueva Reserva</a></li>
-            <li><a href="#lista-reservas" onclick="mostrarSeccion('lista-reservas')">Lista de Reservas</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home" onclick="mostrarSeccion('home')">Inicio</a></li>
+        <li>
+          <a href="#nueva-reserva" onclick="mostrarSeccion('nueva-reserva')"
+            >Nueva Reserva</a
+          >
+        </li>
+        <li>
+          <a href="#lista-reservas" onclick="mostrarSeccion('lista-reservas')"
+            >Lista de Reservas</a
+          >
+        </li>
+      </ul>
     </nav>
     <main>
-        <section id="home">
-            <h2>Inicio</h2>
-            <p>Bienvenido a la página de inicio.</p>
-        </section>
-        <section  id="nueva-reserva">
-            <h2>Nueva Reserva</h2>
-            <form id="formulario-reserva">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-                <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha" required>
-                <label for="hora">Hora:</label>
-                <input type="time" id="hora" required>
-                <label for="personas">Número de personas:</label>
-                <input type="number" id="numero-personas" required>
-                <button type="submit">Agregar Reserva</button>
-            </form>
-        </section>
-        <section id="lista-reservas" style="display: none;">
-            <h2>Lista de Reservas</h2>
-            <div id="lista-reservas-contenido"></div>
-        </section>
+      <section id="home">
+        <h2>Inicio</h2>
+        <p>Bienvenido a la página de inicio.</p>
+      </section>
+      <section id="nueva-reserva">
+        <h2>Nueva Reserva</h2>
+        <form id="formulario-reserva">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required />
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" required />
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" required />
+          <label for="personas">Número de personas:</label>
+          <input type="number" id="numero-personas" required />
+          <button type="submit">Agregar Reserva</button>
+        </form>
+      </section>
+      <section id="lista-reservas">
+        <h2>Lista de Reservas</h2>
+        <div id="lista-reservas-contenido">
+          <table id="tabla-reservas">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Número de personas</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Las filas de las reservas se llenarán dinámicamente -->
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
     <footer>
-        <h3>Esto es el footer</h3>
+      <h3>Esto es el footer</h3>
     </footer>
-</body>
+  </body>
 </html>

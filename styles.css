@@ -25,7 +25,6 @@ body {
     text-align: center;
     gap: 1rem;
     border: #4CAF50 2px solid;
-    border-radius: 3%;
     padding: 1rem;
 }
 
@@ -38,6 +37,7 @@ body {
 #nueva-reserva input:hover {
     background-color: #f9f9f9;
 }
+
 
 #home {
     text-align: center;
@@ -88,15 +88,21 @@ nav ul li a {
 }
 
 form {
-  width: 300px;
-  margin: 0 auto;
-}
-
-label,
-input {
-  display: block;
-  margin-bottom: 10px;
-}
+    width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crear dos columnas */
+    grid-template-rows: auto auto; /* Crear dos filas para los elementos */
+    gap: 1rem; /* Espacio entre las celdas de la cuadrícula */
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%; /* Asegurarse de que los inputs ocupen todo el ancho disponible */
+  }
 
 button {
   padding: 8px 15px;
@@ -126,6 +132,8 @@ td {
 button {
   background-color: #f44336;
   color: white;
+  grid-column: span 2; /* El botón ocupa las dos columnas */
+  padding: 8px 15px;
   padding: 5px 10px;
   border: none;
   cursor: pointer;

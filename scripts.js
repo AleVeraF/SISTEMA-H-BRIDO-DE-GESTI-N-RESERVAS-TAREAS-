@@ -99,3 +99,51 @@ document.addEventListener('DOMContentLoaded', mostrarReservas);
 
 // Agregar el evento al formulario
 document.getElementById('formulario-reserva').addEventListener('submit', manejarFormulario);
+
+
+// Mostar/Ocultar secciones hacienco clic en el menu
+// Hacemos 2 arrays, uno para los enlaces y otro para las secciones
+// Recorremos los enlaces y les asignamos un evento click
+// Al hacer clic, obtenemos el ID de la sección correspondiente
+// Llamamos a la función mostrarSeccion con ese ID
+// La función mostrarSeccion oculta todas las secciones
+// y muestra la sección correspondiente al ID recibido
+// Al cargar la página, mostramos la primera sección por defecto
+document.addEventListener("DOMContentLoaded", () => {
+    const enlaces = document.querySelectorAll("nav a");
+    const secciones = document.querySelectorAll("main > section");
+
+    // Mostrar la primera sección por defecto
+    secciones[0].style.display = "block";
+  
+    function mostrarSeccion(id) {
+      // Ocultar todas las secciones
+      secciones.forEach((seccion) => {
+        seccion.style.display = "none";
+      });
+
+      
+
+      
+  
+      // Mostrar la sección correspondiente
+      // Buscamos la sección por ID
+      // Si la encontramos, la mostramos
+      // Si no la encontramos, no hacemos nada
+      // Esto evita errores si el ID no existe
+      // o si el ID no corresponde a una sección
+      const seccionActiva = document.getElementById(id);
+      if (seccionActiva) {
+        seccionActiva.style.display = "block";
+      }
+    }
+  
+    // Asignar evento a cada enlace
+    enlaces.forEach((enlace) => {
+      enlace.addEventListener("click", (e) => {
+        e.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        const id = enlace.getAttribute("href").substring(1); // Obtener el ID de la sección
+        mostrarSeccion(id);
+      });
+    });
+  });

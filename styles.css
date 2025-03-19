@@ -43,10 +43,19 @@ body {
     text-align: center;
 }
 img {
-    width: 100%; 
-    height: auto;
-    object-fit: cover; 
-    border-radius: 3%;
+    width: 50%; 
+    height: 500px;
+    object-fit: cover;
+    border-radius: 3%; 
+}
+
+@media (max-width: 768px) {
+    img {
+        width: auto; 
+        height: auto;
+        object-fit: cover;
+        border-radius: 3%; 
+    }
 }
 
 header {

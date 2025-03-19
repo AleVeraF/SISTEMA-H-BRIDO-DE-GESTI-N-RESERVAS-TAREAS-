@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+main {
+    height: 800px;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   margin: 0px;
@@ -34,8 +38,6 @@ h2 {
 #nueva-reserva {
   text-align: center;
   gap: 1rem;
-  border: #4caf50 2px solid;
-  border-radius: 3%;
   padding: 1rem;
 }
 

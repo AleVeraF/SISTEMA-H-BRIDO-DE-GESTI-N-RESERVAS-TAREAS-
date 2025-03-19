@@ -12,6 +12,11 @@ function manejarFormulario(event) {
         return;
     }
 
+    if (fecha < new Date().toISOString().split('T')[0]) {
+        alert('La fecha no puede ser anterior a hoy.');
+        return;
+    }
+
     const nuevaReserva = {
         id: Date.now(), 
         nombre,

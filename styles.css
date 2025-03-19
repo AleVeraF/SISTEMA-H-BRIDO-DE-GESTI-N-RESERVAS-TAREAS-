@@ -49,14 +49,24 @@ h2 {
   background-color: #f9f9f9;
 }
 
+
 #home {
   text-align: center;
 }
 img {
-  width: 100%; /* La imagen ocupará el 100% del ancho de la pantalla */
-  height: auto; /* Mantendrá la proporción original para evitar distorsión */
-  object-fit: cover; /* Asegura que la imagen se recorte si es necesario para llenar el espacio */
-  border-radius: 3%;
+  width: 50%; 
+  height: 500px;
+  object-fit: cover;
+  border-radius: 3%; 
+}
+
+@media (max-width: 768px) {
+    img {
+        width: auto; 
+        height: auto;
+        object-fit: cover;
+        border-radius: 3%; 
+    }
 }
 
 header {
@@ -89,15 +99,21 @@ nav ul li a {
 }
 
 form {
-  width: 300px;
-  margin: 0 auto;
-}
-
-label,
-input {
-  display: block;
-  margin-bottom: 10px;
-}
+    width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crear dos columnas */
+    grid-template-rows: auto auto; /* Crear dos filas para los elementos */
+    gap: 1rem; /* Espacio entre las celdas de la cuadrícula */
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%; /* Asegurarse de que los inputs ocupen todo el ancho disponible */
+  }
 
 button {
   padding: 8px 15px;
@@ -152,6 +168,8 @@ th:first-child {
 button {
   background-color: var(--color-primario);
   color: white;
+  grid-column: span 2; /* El botón ocupa las dos columnas */
+  padding: 8px 15px;
   padding: 8px 16px;
   border: none;
   cursor: pointer;

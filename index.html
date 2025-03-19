@@ -13,16 +13,8 @@
     <nav>
       <ul>
         <li><a href="#home" onclick="mostrarSeccion('home')">Inicio</a></li>
-        <li>
-          <a href="#nueva-reserva" onclick="mostrarSeccion('nueva-reserva')"
-            >Nueva Reserva</a
-          >
-        </li>
-        <li>
-          <a href="#lista-reservas" onclick="mostrarSeccion('lista-reservas')"
-            >Lista de Reservas</a
-          >
-        </li>
+        <li><a href="#nueva-reserva" onclick="mostrarSeccion('nueva-reserva')">Nueva Reserva</a></li>
+        <li><a href="#lista-reservas" onclick="mostrarSeccion('lista-reservas')">Lista de Reservas</a></li>
       </ul>
     </nav>
     </header>
@@ -40,22 +32,33 @@
                 <input type="date" id="fecha" required>
                 <label for="hora">Hora:</label>
                 <input type="time" id="hora" required>
-<<<<<<< HEAD
                 <label for="personas">Número de personas:</label>
-=======
-                <label for="numero-personas">Número de personas:</label>
->>>>>>> feature-branch-3
                 <input type="number" id="numero-personas" required>
                 <button type="submit">Agregar Reserva</button>
             </form>
         </section>
-        <section id="lista-reservas" style="display: none;">
+        <section id="lista-reservas">
             <h2>Lista de Reservas</h2>
-            <div id="lista-reservas-contenido"></div>
-        </section>
-    </main>
-    <footer>
-        <h3>Esto es el footer</h3>
-    </footer>
-</body>
-</html>
+            <div id="lista-reservas-contenido">
+              <table id="tabla-reservas">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Número de personas</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Las filas de las reservas se llenarán dinámicamente -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <h3>Esto es el footer</h3>
+        </footer>
+      </body>
+    </html>
